@@ -4,16 +4,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
 import re
-import nltk
 from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
+
 import os
 
-nltk_data_dir = os.path.join(os.getcwd(), "nltk_data")
-nltk.data.path.append(nltk_data_dir)
 
-nltk.download("punkt", download_dir=nltk_data_dir)
-nltk.download("stopwords", download_dir=nltk_data_dir)
 
 
 st.set_page_config(
@@ -74,8 +69,9 @@ def clean_text(text):
 
 def remove_stopwords(text):
     stop_words = set(stopwords.words('english'))
-    words = word_tokenize(text)
-    return " ".join([word for word in words if word not in stop_words])
+    words = text.split()
+    return " ".join(word for word in words if word not in stop_words)
+
 
 
 def tfidf_similarity(resume_text, jd_text):
@@ -184,6 +180,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
