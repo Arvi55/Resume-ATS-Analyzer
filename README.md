@@ -2,7 +2,7 @@
 
 *I built an ATS-inspired resume analyzer using NLP techniques like TF-IDF, keyword overlap, and dynamic weighted scoring to realistically evaluate resume–job alignment.*
 
-🚀 **Live Project:**  [Click Here to Analyze your Resume ]([https://email-sms-spam-classifier-avinash.streamlit.app/](https://avinash-resume-ats-analyzer.streamlit.app/)) 
+🚀 **Live Project:** [Click Here to Try the Spam Classifier](https://email-sms-spam-classifier-avinash.streamlit.app/](https://avinash-resume-ats-analyzer.streamlit.app/) 
 
 ---
 
