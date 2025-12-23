@@ -17,17 +17,11 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown(
-    """
-    <h2 style="color:red;">📄 Resume–Job Match Analyzer</h2>
-    <p style="color:red;">
-    Upload your resume and paste a job description to see how well they match.<br>
-    This tool uses <b>TF-IDF + Keyword Overlap + Weighted Scoring</b>.
-    </p>
-    """,
-    unsafe_allow_html=True
-)
-
+st.markdown("""
+### 📄 Resume–Job Match Analyzer  
+Upload your resume and paste a job description to see how well they match.  
+This tool uses **TF-IDF + Keyword Overlap + Weighted Scoring**.
+""")
 
 
 with st.sidebar:
@@ -180,6 +174,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
