@@ -76,20 +76,21 @@ def tfidf_similarity(resume_text, jd_text):
     )[0][0] * 100
     return round(score, 2)
 
-
 def keyword_overlap_score(resume_text, jd_text):
     resume_text = resume_text.lower()
     jd_text = jd_text.lower()
 
     stop_words = set(stopwords.words('english'))
 
-    jd_tokens = word_tokenize(jd_text)
+    # simple tokenization (NO NLTK tokenizer)
+    jd_tokens = jd_text.split()
+
     jd_keywords = [
         w for w in jd_tokens
         if w.isalpha() and w not in stop_words and len(w) > 2
     ]
 
-    jd_keywords = list(set(jd_keywords))  
+    jd_keywords = list(set(jd_keywords))
 
     matched = [kw for kw in jd_keywords if kw in resume_text]
 
@@ -174,6 +175,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
